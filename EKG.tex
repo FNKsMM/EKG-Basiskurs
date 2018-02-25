@@ -1,0 +1,134 @@
+% ********************************************* %
+%    Template 0.1, David Auzinger, 17.07.2015
+% ********************************************* %
+
+\input{./config/packages.tex}
+
+%---------------------------------- 
+% Dokumentparameter 
+%----------------------------------
+
+%\newcommand{\commercial}{}
+
+% Author Information
+\newcommand{\varAuthOneName}		{David Auzinger}
+\newcommand{\varAuthOneInstitution}	{ASBÖ Linz}
+\newcommand{\varAuthTwoName}		{\textbf{Inoffiziell, ohne Gewähr!}}
+
+% Date
+%\day=1 \month=1 \year=2015  
+
+\title{EKG Erste Schritte \& Basiskurs}
+\author{
+\ifdef{\varAuthOneName}{\varAuthOneName\ifdef{\varAuthOneInstitution}{ - \varAuthOneInstitution}{}}{}
+\ifdef{\varAuthTwoName}{\\\varAuthTwoName\ifdef{\varAuthTwoInstitution}{ - \varAuthTwoInstitution}{}}{}
+\ifdef{\varAuthThreeName}{\\\varAuthThreeName\ifdef{\varAuthThreeInstitution}{ - \varAuthThreeInstitution}{}}{}
+}
+
+
+%----------------------------------
+% Kopf / Fußnote 
+%----------------------------------
+\geometry{top=20mm, left=20mm, right=20mm, bottom=40mm}
+%\reversemarginpar							%Margin Seiten Vertauschen
+%\setlength{\headwidth}{170mm}
+%\setlength{\headsep}{25mm}
+\setlength{\headheight}{15mm}
+%\setlength{\marginparwidth}{30mm}
+%\setlength{\oddsidemargin}{30mm}
+%\setlength{\textheight}{223mm}
+%\setlength{\textwidth}{135mm}
+
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\lhead{EKG Erste Schritte \& Basiskurs}
+\chead{}
+\rhead{\subtitle} 
+\lfoot{}
+\cfoot{
+\ifdef{\varAuthOneName}{\varAuthOneName}{}
+\ifdef{\varAuthTwoName}{ | \varAuthTwoName}{}
+\ifdef{\varAuthThreeName}{ | \varAuthThreeName}{}
+}
+\rfoot{\thepage}
+
+
+ 
+%-------------------------------------------
+% Listings konfiguration
+%-------------------------------------------
+%Compuler XE LATEX = true
+\lstset{
+basicstyle=\ttfamily\footnotesize,, 
+numbers=left, 
+language=Matlab,
+showstringspaces=false,
+breaklines=true,
+breakautoindent=true, 
+tabsize=2, 
+frame=single,
+literate=%
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}2
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+}
+
+
+
+%-------------------------------------------
+% TitelEinstellungen 
+%-------------------------------------------
+%\renewcommand*{\thesubsection}{\alph{subsection})} 
+%\renewcommand*{\thesubsubsection}{\alph{subsection}\alph{subsubsection})} 
+%\makeatletter 
+
+%\titlespacing*{\section}{0pt}{0pt}{15pt}
+%\titlespacing*{\subsection}{0pt}{0pt}{-15pt}
+
+\newcommand{\unit}{\SI}
+
+\begin{document}
+
+%----------------------------------
+% Automatisierte Ausgaben
+%----------------------------------
+
+
+
+\pagestyle{fancy}
+
+
+%Titelblatt
+\maketitle
+
+\vspace{3cm}
+
+
+
+\newpage
+
+%Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% Include predefined EKG-Curves
+\include{./config/archivio}
+
+\input{./content/01_Basiskurs.tex}
+
+
+\appendix
+\newpage
+\input{./content/B1_Quellen.tex}
+
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{./content/bibliography}
+
+\end{document}

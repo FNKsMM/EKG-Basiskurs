@@ -1,0 +1,22 @@
+\select@language {naustrian}
+\contentsline {section}{\numberline {1}Beurteilungsalgorithmus}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Frequenz}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Rhythmus}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Intervalle und Zeiten}{4}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}PQ-Zeit}{4}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}QRS-Breite}{4}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}QT-Zeit}{4}{subsubsection.1.3.3}
+\contentsline {subsection}{\numberline {1.4}Beurteilung des Lagetyps}{4}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}LVH (Linksventrikul\IeC {\"a}re Hypertrophie)}{7}{subsection.1.5}
+\contentsline {section}{\numberline {2}Erregungsleitung}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}Atrioventrikul\IeC {\"a}rer Block (AV-Block)}{9}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}AV-Block I\textdegree \ (Grad 1)}{9}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}AV-Block II\textdegree \ (Grad 2)}{10}{subsubsection.2.1.2}
+\contentsline {paragraph}{AV-Block II\textdegree \ Typ 1 (Wenckeback / Mobitz 1)}{10}{paragraph*.10}
+\contentsline {paragraph}{AV-Block II\textdegree \ Typ 2 (Mobitz / Mobitz 2)}{10}{paragraph*.12}
+\contentsline {subsubsection}{\numberline {2.1.3}AV-Block III\textdegree \ (Grad 3)}{10}{subsubsection.2.1.3}
+\contentsline {subsection}{\numberline {2.2}Schenkelblock}{10}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Rechtsschenkelblock}{11}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Linksschenkelblock}{11}{subsubsection.2.2.2}
+\contentsline {section}{\numberline {A}Quellen \& OpenSource Code}{12}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}LaTex Paket: ecgdraw}{12}{subsection.A.1}

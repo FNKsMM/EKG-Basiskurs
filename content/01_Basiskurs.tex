@@ -1,0 +1,254 @@
+\nuovoECG{text-p}{(0.15, 0.2) node[scale=1.5, above] {P-Welle} (0, 0)}
+\nuovoECG{text-qrs}{(0.15, 1) node[scale=1.5, above] {QRS-Komplex} (0, 0)}
+\nuovoECG{text-t}{(0.25, 0.3) node[scale=1.5, above] {T-Welle} (0, 0)}
+\nuovoECG{text-u}{(0.1, 0.1) node[scale=1.5, above] {U-Welle} (0, 0)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{./img/EKG_Complex_de}
+	\caption{Schematische Darstellung eines EKG eines gesunden Menschen \cite{ekg_symbolic}} \label{01:Wellen-Gesamterregung-Beschriftet}
+\end{figure}
+
+\section{Beurteilungsalgorithmus}
+Bei der Beurteilung eines EKG's wird nach einem Schema vorgegangen. Bei diesem Schema werden die im folgenden aufgelisteten Punkte abgearbeitet.
+
+\subsection{Frequenz}
+Anhand aller Ableitungen wird die Frequenz der Erregungen beurteilt. Dabei ist eine längere Aufnahme einer Ableitung von Vorteil (z.B. die bei manchen EKG-Geräten durchgezogene II-Ableitung). Zur Abschätzung der Frequenz können die großen Kästchen zwischen zwei aufeinanderfolgenden QRS-Komplexen gezählt werden. Mit dem Zählen der großen Kästchen erhält man eine Frequenz von $300 - 150 - 100 - 75 - 60 - 50\ (- 43 - 37.5)$ Erregungen pro Minute.\\
+Zusätzlich sollten hier Arrhythmien bereits auffallen. Wenn die Erregung unregelmäßig auftritt kann zusätzlich die Durchschnittliche Frequenz ermittelt werden. Eine Möglichkeit dafür ist es mit den selben Zählschritten ($300 - 150 - ...$) immer drei große Kästchen zu zählen bis man den dritten Komplex erreicht (Anstelle der Zahl drei kann bei Bedarf auch ein beliebiges anderes Vielfaches verwendet werden).
+
+\subsection{Rhythmus}
+Es wird untersucht ob ein Sinus-Rhythmus vorliegt bzw. wenn nicht woher der Rhythmus sonst stammt. Auf das Vorliegen eines Sinus-Rhythmus deuten eine gleichbleibende PQ-Zeit sowie eine Frequenz $>\SI{60}{\per\minute}$.
+Liegt kein Sinus-Rhythmus vor, springen der AV-Knoten sowie weiter unten liegende Komponenten der Erregungsleitung ein. Der AV-Knoten erzeugt einen Takt mit einer Frequenz von $\num{40}-\SI{50}{\per\minute}$.
+
+\subsection{Intervalle und Zeiten}
+Die zeitlichen Abstände zwischen den einzelnen Wellen bzw. deren Breite können Aufschluss auf diverse Probleme geben.
+
+\subsubsection{PQ-Zeit}
+Die PQ-Zeit (im Englischen auch PR-Interval genannt) ist die Zeit vom Beginn der P-Welle bis zum Beginn des QRS-Komplexes (siehe Abb. \ref{01:Wellen-Gesamterregung-Beschriftet}). Diese Zeit sollte kleiner als $\SI{0.2}{\second}$ sein.
+
+\subsubsection{QRS-Breite}
+Die QRS-Komplexe nennt man 'schmal' wenn sie kleiner als 2.5 kleine Kästchen sind und breit wenn sie diese Grenze überschreiten.
+
+\subsubsection{QT-Zeit}
+Die QT-Zeit ist die Zeit vom Beginn des QRS-Komplexes bis zum Ende der T-Welle. Überschreitet diese Zeit einen bestimmten Grenzwert besteht ein erhöhtes Todesrisiko. Dieser Grenzwert beträgt für Frauen $\SI{0.45}{\second}$ und für Männer $\SI{0.47}{\second}$. Allerdings gelten diese Werte nur für eine Herzfrequenz von $\SI{60}{\per\second}$. Um eine Aussage über die QT-Zeit bei anderen Herzfrequenzen treffen zu können kann man die sog. korrigierte QT-Zeit QTc berechnen. Für diese Korrektur gibt es diverse Formeln die jedoch meist nicht für eine Kopfrechnung geeignet sind, allerdings geben die meisten EKG-Geräte QTc aus. Wichtig ist, dass die meisten Korrekturen nur in einem beschränkten Bereich gelten, d.h. die Beurteilung von QTc ist bei sehr hohen und sehr niedrigen Frequenzen kaum möglich.
+
+\subsection{Beurteilung des Lagetyps} \label{01:Lagetyp}
+
+
+Trägt man die Extremitätenableitungen in der Frontaleben auf erhält man den sog. Cabrerakreis (siehe Abb. \ref{01:Cabrerakreis}). Mithilfe dieses Diagramms kann man die Hauptausbreitungsrichtung der elektrischen Erregung, die sog. elektrische Herzachse bestimmen. Diese ist diagnostisch relevant, da es einerseits Lagetypen gibt die von vornherein als pathologisch (krank) gelten und andererseits da bestimmte Herzerkrankungen die Lage der elekt. Herzachse verändern. Es werden die folgenden Lagetypen unterschieden:
+\begin{itemize}
+	\item Überdrehter Linkstyp: $\ang{-150}$ bis $\ang{-30}$
+	\item Linkstyp: $\ang{-30}$ bis $\ang{30}$
+	\item Indifferenz-/Normtyp: $\ang{30}$ bis $\ang{60}$
+	\item Steiltyp: $\ang{60}$ bis $\ang{90}$
+	\item Rechtstyp: $\ang{90}$ bis $\ang{120}$
+	\item Überdrehter Rechtstyp: $\ang{120}$ bis $\ang{210}$
+\end{itemize}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{./img/Cabrerakreis}
+	\caption{Extremitätenableitungen in der Frontalebene (Cabrerakreis)}\label{01:Cabrerakreis}
+\end{figure}
+
+Es gilt nun also Anhand der EKG-Kurven der Extremitätenableitungen den ungefähren Winkel der elektrischen Herzachse zu bestimmen. Trägt man die Hauptausbreitungsrichtung der Erregung in ein Diagramm wie Abb. \ref{01:Cabrerakreis} ein, sieht man auf den Ableitungen die Projektion des Vektors der elektr. Herzachse auf den der jeweiligen Ableitung. 
+
+\exkbox{
+\textbf{Exkurs: Vektorprojektion}\\
+Vereinfacht dargestellt ist ein Vektor ein Pfeil in eine Richtung mit einer bestimmten Länge. Die Projektion eines Vektors $\vec{a}$ auf einen anderen Vektor $\vec{b}$ (Vektorprojektion) ist der Schatten den $\vec{a}$ auf $\vec{b}$ wirft wenn das Licht senkrecht zu $\vec{b}$ steht.
+\begin{figure}[H]
+	\centering
+	\includegraphics{./img/Vektorprojektion}
+	\caption{Vektorprojektion von $\vec{a}$ auf $\vec{b}$.} \label{01:Exk-Vektorprojektion}
+\end{figure}
+Wenn der Winkel zwischen $\vec{a}$ und $\vec{b}$ mehr als $\ang{90}$ beträgt kommt es zu folgendem Spezialfall:
+\begin{figure}[H]
+	\centering
+	\includegraphics{./img/Vektorprojektion-negativ}
+	\caption{Der Spezialfall der negativen Vektorprojektion} \label{01:Exk-Vektorprojektion-negativ}
+\end{figure}
+Die Projektion von $\vec{a}$ auf $\vec{b}$ zeigt in die selbe Richtung wie $\vec{b}$ (Ausnahme: Im negativen Spezialfall zeigt sie exakt in die Gegenrichtung). 
+}
+Genauer gesagt sieht man in den QRS-Komplexen der jeweiligen Ableitungen das Vorzeichen und die Länge der Projektion.
+\begin{figure}[H]
+	\centering
+	\ECG{?Positiv, i80, q31, r712, s21, i80, ?Negativ, i80, r31, s712, r21, i80, ?{Neutral (0)}, i80, r55, s55, i80}
+\caption{'Positiver', 'Negativer' und 'Neutraler' QRS-Komplex in einer Ableitung} \label{01:Wellen-Vorzeichen}
+\end{figure}
+Das Vorzeichen zeigt sich wie in Abb. \ref{01:Wellen-Vorzeichen}, die Länge zeigt sich als Höhe der R- bzw. S-Zacken (höhere Zacken bedeuten eine längere Projektion).
+
+\bspbox{
+\textbf{Beispiel: Bestimmung des Lagetyps}\\
+Zur Veranschaulichung ein Beispiel eines Normaltypen:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./img/Bsp-Lagetyp}
+	\caption{Cabrerakreis bei einem Menschen mit Normaltyp}\label{01:Bsp-Lagetyp}
+\end{figure}
+
+Bei einem Winkel der elekt. Herzachse von $\ang{52}$ sind die Projektionen auf I, II und aVF deutlich positiv. Deutlich am höchsten ist die R-Zacke in II. aVL steht nachezu negativ auf die elekt. Herzachse und weist damit neutrale Komplexe auf. Ähnlich sieht III aus, allerdings sind dort die Komplexe noch leicht positiv. aVR ist beinahe gegenüber der elekt. Herzachse und hat damit negative Komplexe deren S-Zacken beinahe so hoch sind wie die R-Zacken in II.
+
+\begin{figure}[H]
+	\begin{ecg}
+		\ECG{?I, i80, !{pp0160}, i40, q21, r66, q11, i50, tp31, 
+			?aVR, i80, !{pn0160}, i40, r21, s613, r11, i50, tn33}
+		\ECG{?II, i80, !{pp0160}, i40, q21, r615, q11, i50, tp33, 
+			?aVL, i80, !{pp0160}, i40, r34, q34, i50, tp31}
+		\ECG{?III, i80, !{pp0160}, i70, r35, q33, i50, tp31, 
+			?aVF, i80, !{pp0160}, i40, q21, r69, q11, i50, tp32}
+	\end{ecg}
+	\caption{Symbolisches EKG-Bild zu Abb. \ref{01:Bsp-Lagetyp}} \label{01:EKG,Bsp-Lagetyp}
+\end{figure}
+}
+
+%TODO Lew 4 quadranten typen
+
+\subsection{LVH (Linksventrikuläre Hypertrophie)}
+LVH ist eine pathologische Veränderung des Herzen die meist durch chronische arterielle Hypertonie auftritt. Durch den dauerhaft hohen Blutdruck muss die linke Herzhälfte mehr Leistung bringen wodurch sich der Muskel verdickt (er wird trainiert). Da jedoch die Koronargefäße nicht mitwachsen kann dies u.a. zu einer Mangelversorgung des Herzmuskels (Myokard) führen. Bei der Beurteilung einer EKG-Aufnahme ist der Hauptgrund für die Suche nach Zeichen einer LVH aber, dass diese das Bild stark verändert und damit ev. Diagnosen verfälschen kann. Starke Indikatoren für das Vorhandensein einer LVH  sind:
+\begin{itemize}
+	\item \textbf{Ein Sokolov-Lyon-Index größer gleich $\mathbf{35}$mm}\\
+	Der Sokolov-Lyon-Index ist die Summe der Höhe des tiefsten S-Peaks in V1 oder V2 und des höchsten R-Peaks in V5 oder V6. Dieses Kriterium ist nur anwendbar bei Personen über 35 Jahren
+	
+	\item \textbf{R in aVL größer gleich $\mathbf{12}$mm}
+	
+	\item \textbf{Auftreten von LV Strain Pattern in den lateralen Ableitungen (V4-V6, I \& aVL)}\\
+	Ein LV Strain Pattern ist eine (absinkende) ST-Senkung in Kombination mit einer negativen T-Welle.
+	
+	\item \textbf{Drehung der elekt. Herzachse nach Links}\\
+	Bei LVH liegt, aufgrund des vergrößerten Linksherzes, meist ein Linkstyp oder ein überdrehter Linkstyp vor.
+\end{itemize}
+
+\bspbox{
+	\textbf{Beispiel: Linksventrikuläre Hypertrophie}\\
+	Im folgenden Bild ist erkennbar, dass von den Extremitätenableitungen der größte R-Peak in I liegt. Zusätzlich ist aVF neutral bis leicht negativ. Dies lässt auf einen Winkel der elekt. Herzachse leicht unter $\ang{0}$ schließen und ergibt somit einen Linkstyp. Der niedrigste S-Peak in V1 oder V2 und der höchste R-Peak in V5 oder V6 ergeben in Summe $\SI{61}{\milli\meter}$ und liegen damit deutlich über $\SI{35}{\milli\meter}$. Die R-Peaks in aVL sind mit $\SI{14}{\milli\meter}$ größer als $\SI{12}{\milli\meter}$ und sowohl in V5 als auch in V6 ist ein LV strain pattern erkennbar. Es sind alle oben erwähnten Indikatoren vorhanden, eine LVH ist damit sehr wahrscheinlich.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.95\textwidth]{./img/Bsp-LVH}
+		\caption{12-Kanal EKG eines Patienten/einer Patientin mit LVH}\label{01:Bsp-LVH}
+	\end{figure}
+
+}
+
+%TODO
+%\nuovoECG{lvstrain1}{(0,0)--(0.02,-0.1)--(0.4,-0.12)--(0.43,-0.13)--(0.45,-0.14)--(0.47,-0.142)--(0.49,-0.13)--(0.5,-0.125)--(0.65,0)}
+%\begin{figure}[H]
+%	\begin{ecg}
+%		\ECG{?I, i80, !{pp0160}, i70, r917, !{lvstrain1}, i40}
+%	\end{ecg}
+%	\caption{Symbolisches EKG-Bild zu Abb. \ref{01:Bsp-Lagetyp}} \label{01:EKG,Bsp-Lagetyp}
+%\end{figure}
+
+\newpage
+\section{Erregungsleitung}
+Im gesunden Herz geht die Erregung vom Sinusknoten im Vorhof aus. Beim Eintreffen im AV-Knoten wird sie kurz verzögert, um dem Atrium (Vorhof) Zeit zu geben. Vom AV-Knoten breitet sich die Erregungsleitung über das His-Bündel in den linken und den rechten Tawaraschenkel aus. Der Linke Tawaraschenkel teilt sich, weil das Linksherz größer ist, noch in einen hinteren (posterioren) und vorderen (anterioren) Teil.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{./img/Erregungsleitung}
+	\caption{Erregungsleitungssystem des menschlichen Herzen (vereinfacht).}\label{01:Erreigungsleitungssystem}
+\end{figure}
+Der Sinusknoten erzeugt, vom Nervensystem gesteuert, mit einer Frequenz von mehr als $\approx\SI{60}{\per\minute}$ ein Signal. Der AV-Knoten erzeugt ebenfalls mit einer Frequenz von $\approx\num{40}-\SI{50}{\per\minute}$ ein Signal, allerdings wird dieses unterdrückt, wenn zwischenzeitlich eine Erregung vom Sinusknoten ankommt. Durch die niedrigere Frequenz führt dies dazu, dass beim Ausfall des Sinusknoten bzw. der Erregungsleitung zum AV-Knoten dieser die Schrittmacherfunktion des Herzes übernimmt. Eine ähnliche Funktion gibt es auch im His-Bündel mit einer Eigenfrequenz von $\approx\num{20}-\SI{30}{\per\minute}$ bzw. Des Weiteren kann auch jede Herzmuskelzelle mit einer niedrigen Frequenz ein Signal erzeugen. Ist die Schrittmacherfunktion oder Erregungsleitung in diesem System gestört kommt es zu verschiedenen Pathologien.
+
+\subsection{Atrioventrikulärer Block (AV-Block)}
+Wie der Name schon vermuten lässt handelt es sich hierbei um ein Problem/eine Blockade bei der Überleitung der Erregung vom Atrium (Vorhof) in den Ventrikel (Kammer). Abhängig von der Symptomatik unterscheidet man 3 Grade von AV-Blocks.
+
+\subsubsection{AV-Block I\textdegree\ (Grad 1)}
+Bei einem AV-Block vom Grad ist die Überleitung vom Atrium (Vorhof) in den Ventrikel (Kammer) stärker verzögert. Am EKG macht sich das durch eine PQ-Zeit $>\SI{0.2}{\second}$ bemerkbar. Er bleibt meist symptomlos und ist damit klinisch kaum relevant.
+
+\subsubsection{AV-Block II\textdegree\ (Grad 2)}
+Beim AV-Block II\textdegree\ kommt es trotz vorhandener Atriumserregung zum teilweisen Ausfall der Kammerkontraktion. Es werden zwei Typen von AV-Block II\textdegree\ unterschieden.
+\paragraph{AV-Block II\textdegree\ Typ 1 (Wenckeback / Mobitz 1)}
+Bei diesem Typ von AV-Block wird (meist durch Zellermüdung) die PQ-Zeit mit jeder Erregung länger bis die Kammeraktion einmalig ausfällt. Dadurch wird die PQ-Zeit wieder zurückgesetzt. Die Erregung ist rhythmisch arrhythmisch.
+\begin{figure}[H]
+	\begin{ecg}
+		\ECG{i40, !{pp0160}, i60, q31, r510, s21, i50, tp22, i210,
+			!{pp0160}, i120, q31, r510, s21, i50, tp22, i150,
+			!{pp0160}, i180, q31, r510, s21, i50, tp22, i90,
+			!{pp0160}, i620,
+			!{pp0160}, i60, q31, r510, s21, i50, tp22, i210,
+			!{pp0160}, i120, q31, r510, s21, i50, tp22, i150,
+			!{pp0160}, i180, q31, r510, s21, i50, tp22, i90,
+			!{pp0160}, i620}
+	\end{ecg}
+	\caption{AV-Block II\textdegree\ Typ 1} \label{01:EKG-AV-Grad2-Wenckebach}
+\end{figure}
+
+\paragraph{AV-Block II\textdegree\ Typ 2 (Mobitz / Mobitz 2)}
+Bei einem AV-Block II\textdegree\ Typ 2 bleibt die PQ-Zeit konstant und die AV-Überleitung funktioniert ein- bis mehrmals korrekt, anschließend fällt die Kammererregung ein- bis mehrmals aus. Bei dieser Art von AV-Block wird das Verhältnis von Erregungen im Atrium zu den Erregungen im Ventrikel angegeben. Im Spezialfall des 2:1-Blocks (es kommen 2 P-Wellen auf jeden QRS-Komplex) ist es nicht möglich Typ 1 und Typ 2 zu unterscheiden, diese Art von Block nennt man 2:1 AV-Block. Die Erregung ist ebenfalls rhythmisch arrhythmisch.
+\begin{figure}[H]
+	\begin{ecg}
+		\ECG{i40, !{pp0160}, i60, q31, r510, s21, i50, tp22, i210,
+			!{pp0160}, i60, q31, r510, s21, i50, tp22, i210,
+			!{pp0160}, i620,
+			!{pp0160}, i60, q31, r510, s21, i50, tp22, i210,
+			!{pp0160}, i60, q31, r510, s21, i50, tp22, i210,
+			!{pp0160}, i620,
+			!{pp0160}, i60, q31, r510, s21, i50, tp22, i210,
+			!{pp0160}, i60, q31, r510, s21, i50, tp22, i210
+			}
+	\end{ecg}
+	\caption{AV-Block II\textdegree\ Typ 2 (3:2)} \label{01:EKG-AV-Grad2-Mobitz}
+\end{figure}
+
+\subsubsection{AV-Block III\textdegree\ (Grad 3)}
+Bei einem AV-Block III\textdegree\ ist die Überleitung vom Atrium in den Ventrikel komplett blockiert, Der Sinus- und der AV-Knoten geben unabhängig von einander den Takt für das Atrium und den Ventrikel vor. Am EKG ist dies daran zu erkennen, das kein Zusammenhang zwischen P-Wellen und den Kammerkomplexen besteht.
+
+\nuovoECG{avblock3-tp-overlap}{(0, 0) -- (0.1, 0.07) -- (0.2, 0.19) -- (0.25, 0.18) -- (0.3, 0.235) -- (0.355, 0.184) -- (0.38, 0.13) -- (0.4, 0.06) -- (0.45, 0.03) -- (0.5, 0)}
+
+\nuovoECG{avblock3-rp-overlap}{(0, 0) -- (0.0625, 1) -- (0.11, 0.12) -- (0.12, 0.1) -- (0.14, 0.08) -- (0.16, 0)}
+
+\begin{figure}[H]
+	\begin{ecg}
+		\ECG{i40, 
+			!{pp0160}, r510, s21, i50, tp22, i500,
+			!{pp0160}, i200, r510, s21, i50, tp22, i300,
+			!{pp0160}, i400, r510, s21, i50, tp22, i100,
+			!{pp0160}, i600, r510, s21, i60, !{avblock3-tp-overlap}, i620,
+			i130, !{avblock3-rp-overlap}, i25, tp22, i500
+			}
+	\end{ecg}
+	\caption{AV-Block III\textdegree} \label{01:EKG-AV-Grad3}
+\end{figure}
+
+\subsection{Schenkelblock}
+Ist die Erregungsleitung in einem der Schenkel blockiert, läuft die Erregung vom anderen, normal funktionsfähigen, Schenkel über das Myokard zum gestörten Teil des Herzen, Da jedoch die Erregungsleitung im Myokard deutlich langsamer verläuft als in den Schenkeln, macht sich eine derartige Störung durch breite QRS-Komplexe bemerkbar. Ab einer Breite von $\SI{0.12}{\second}$ (3 kleine Kästchen) spricht man von einem kompletten Schenkelblock.
+
+\subsubsection{Rechtsschenkelblock}
+Wenn der Rechte Schenkel blockiert ist, wird zuerst das Linksherz über den Linken Schenkel erregt und anschließend über das Moykard das Rechtsherz. Dadurch wird am EKG während der Komplexe ein, zeitlich 'breiter', 'Strom' von Links nach Rechts sichtbar. D.h. Anteriore (frontale) Ableitungen (V1 \& V2) zeigen deutlich positive Komplexe. Typisch sind auch die sog. Hasenohren: eine kleine, schmale r-Zacke direkt gefolgt von einer großen breiten R'-Zacke. Bei den lateralen (seitliche, beim ELG immer links) Ableitungen (V4-V6, I, aVL) zeigen sich deutlich breitere zum Teil auch stumpfe S-Zacken.
+
+\nuovoECG{hasenohren}{(0,0) -- (0.05, 0.3) -- (0.1, -0.08) -- (0.2, 0.6) -- (0.3, 0.9) -- (0.4, 0)}
+\nuovoECG{abstand}{(0,0) (0.4, 0)}
+\nuovoECG{breite-s}{(0,0) -- (0.01, -0.3) -- (0.25, 0)}
+\nuovoECG{stumpfe-s}{(0,0) -- (0.01, -0.3) -- (0.1, -0.32) -- (0.2, -0.32) -- (0.25, 0)}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.2\textwidth}
+		\centering
+		\begin{ecg}
+			\ECG{i40, !{pp0160}, i60, !{hasenohren}, i40, tn23, i80}
+		\end{ecg}
+		\subcaption{'Hasenohren'}\label{01:EKG-RSB-Hasenohren}
+	\end{minipage}%
+	\begin{minipage}[b]{0.3\textwidth}
+		\centering
+		\begin{ecg}
+			\ECG{i40, !{pp0160}, i60, r39, !{breite-s}, i60, tp22, i80, !{abstand}, 
+				i40, !{pp0160}, i60, r39, !{stumpfe-s}, i60, tp22, i80}
+		\end{ecg}
+		\subcaption{\centering Breite/Stumpfe S-Zacken} \label{01:EKG-RSB-Breite-S}
+	\end{minipage}
+\end{figure}
+
+\bspbox{
+	\textbf{Beispiel: Rechtsschenkelblock}\\
+	Im folgenden Bild sind in V1 und V2 die doppelten R-Zacken (rSR'-Komplexe, Hasenohren) zu erkennen, ebenfalls sichtbar ist, dass die lateralen Ableitungen (I, aVL, V4-V6) sowie hier auch II breite, stumpfe S-Zacken aufweisen. In Kombination mit den in allen Ableitungen breiten Komplexen lässt sich auf einen Rechtsschenkelblock schließen.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.95\textwidth]{./img/Bsp-RBBB}
+		\caption{12-Kanal EKG eines Patienten/einer Patientin mit Rechtsschenkelblock \cite{ekg_rbbb}}\label{01:Bsp-RBBB}
+	\end{figure}
+}
+
+\subsubsection{Linksschenkelblock}
+Beim Linksschenkelblock ist der Vorgang umgekehrt, d.h. die Erregung verläuft über den funktionsfähigen rechten Schenkel und breitet sich vom Rechtsherz über das Myokard zum Linksherz aus. Dadurch ist am EKG eine Bewegung von rechts nach links sichtbar. Anteriore Ableitungen zeigen kaum vorhandenen r-Zacken gefolgt von tiefen und breiten S-Zacken. Die lateralen Ableitungen weisen breite, stumpfe R-Zacken und eine ST-Senkung in Kombination mit einer negativen T-Welle auf.

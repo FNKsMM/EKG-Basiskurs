@@ -1,0 +1,74 @@
+\documentclass[11pt, a4paper]{scrartcl} 	%Dokumententype und Schriftgröße
+\usepackage[naustrian]{babel}  				%Sprache Österreichisch
+\RequirePackage{ifthen}						%If then Package für Abfragen
+
+\usepackage{lmodern}		 				%Latin Modern Fonts
+\usepackage[T1]{fontenc}					%Schriften unterschiedlicher Kodierung
+\usepackage[utf8]{inputenc}					%Eingabekodierung UTF8
+\usepackage{amsmath}
+\usepackage{listingsutf8}					%Listings Package
+
+\usepackage{parskip} 			%Abstand zwiscthen Absätzen
+\usepackage{fancyhdr}			%Kopf / Fußzeilen befüllen
+\usepackage{graphicx}			%Lib für das Einbinden von Bildern
+\usepackage{geometry}			%Einstellen von den Gemetrien des Dokuments
+\usepackage{float}				%Bild an eine fixe Position legen
+\usepackage{textcomp}			%Für UTF8 listign
+\usepackage{listings}			%Code Lisiting in Latex
+\usepackage{esdiff}				%Aufrechtes Symbol beim Differenzieren
+\usepackage{amsmath}			%Mathematik Umgebung
+\usepackage{longtable}			%Erweiterung für Mehrseitige Tabellen
+\usepackage{titlesec}			%Zum setzen von Titelabständen
+\usepackage{siunitx} 			%SI Units
+\usepackage{trfsigns}			%Komplexe Zeichen (Laplace hantln und so sachen)
+\usepackage{pdfpages}			%Einbinden von PDF Seiten
+\usepackage{epstopdf}			%EPS grafiken
+\usepackage{tabularx}			%Für mehrzeilige Tabelleneinträge
+\usepackage{trfsigns}			%Laplace Trafo  
+\usepackage{etoolbox}			%\ifdef
+
+\usepackage{hyperref}			%Sprungmarken in PDF Datei einfügen
+
+\usepackage{ecgdraw} % draw ecg-curves
+
+\usepackage{subcaption}
+\usepackage[breakable, theorems, skins]{tcolorbox}
+\tcbset{enhanced}
+
+\definecolor{exkboxcolor}{RGB}{255,220,220}
+\DeclareRobustCommand{\exkbox}[2][exkboxcolor]{%
+	\begin{tcolorbox}[   %% Adjust the following parameters at will.
+		breakable,
+		left=0pt,
+		right=0pt,
+		top=0pt,
+		bottom=0pt,
+		colback=#1,
+		colframe=#1,
+		width=\dimexpr0.95\textwidth\relax, 
+		enlarge left by=5mm,
+		boxsep=5pt,
+		arc=0pt,outer arc=0pt,
+		]
+		#2
+	\end{tcolorbox}
+}
+
+\definecolor{bspboxcolor}{RGB}{230,230,255}
+\DeclareRobustCommand{\bspbox}[2][bspboxcolor]{%
+	\begin{tcolorbox}[   %% Adjust the following parameters at will.
+		breakable,
+		left=0pt,
+		right=0pt,
+		top=0pt,
+		bottom=0pt,
+		colback=#1,
+		colframe=#1,
+		width=\dimexpr0.95\textwidth\relax, 
+		enlarge left by=5mm,
+		boxsep=5pt,
+		arc=0pt,outer arc=0pt,
+		]
+		#2
+	\end{tcolorbox}
+}

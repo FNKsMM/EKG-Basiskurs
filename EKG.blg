@@ -1,0 +1,9 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: EKG.aux
+A level-1 auxiliary file: ./config/archivio.aux
+The style file: plain.bst
+Database file #1: ./content/bibliography.bib
+Warning--entry type for "ekg_symbolic" isn't style-file defined
+--line 3 of file ./content/bibliography.bib
+Warning--entry type for "ekg_rbbb" isn't style-file defined
+--line 13 of file ./content/bibliography.bib
+(There were 2 warnings)
